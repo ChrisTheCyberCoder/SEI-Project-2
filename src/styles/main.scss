@@ -3,16 +3,37 @@
 .mainContainer {
   border: 3px solid black;
   width: 80vw; 
-  height: 100vh;
-  margin: 0 auto; 
+  height: 80vh;
+  margin: 100px auto auto auto; 
+  background-color: yellow;
 }
 
 .mainContainer div {
   border: 1px solid black;
   width: 400px;
   height: 400px; 
-  margin: 300px auto auto auto; 
+  margin: 200px auto auto auto; 
   text-align: center;
   line-height: 400px;
   font-size: 40px; 
+}
+
+.mainContainer h4 {
+  margin: 0 auto; 
+  border: 1px solid black; 
+  width: 100px; 
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  margin: 30px auto auto auto;
+}
+
+.multipleChoices {
+  border: 1px solid green; 
+  width: 700px; 
+  margin: 200px auto auto auto; 
+}
+
+.multipleChoices h3 {
+  color: red; 
 }

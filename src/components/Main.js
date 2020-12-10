@@ -1,15 +1,23 @@
 import React from 'react'
+//import { Link } from 'react-router-dom'
 
 function Main() {
 
   return (
-    <body className="mainContainer">
-      <div>
-        Quiz Choice
-      </div>
-    </body>
+    <div className="mainContainer">
+
+    </div>
   )
 
 }
 
 export default Main
+
+/* <div>
+Quiz Choice
+        
+</div>
+
+<Link to={'/play'}>
+  <h4>PLAY</h4>
+  </Link> */
