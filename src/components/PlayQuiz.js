@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-// import Test from '../components/Test.js'
+import Header from '../components/Header.js'
 
 function PlayQuiz() {
 
@@ -69,41 +69,41 @@ function PlayQuiz() {
     if (randomNumber === 0) {
       return (
         <>
-          <h3>{quizzes[nextQuestion].question}</h3>
-          <h4 data-id="wrong" onClick={handleClick}> {quizzes[nextQuestion].incorrect_answers[0]} </h4>
-          <h4 data-id="wrong" onClick={handleClick}> {quizzes[nextQuestion].incorrect_answers[1]} </h4>
-          <h4 data-id="wrong" onClick={handleClick}> {quizzes[nextQuestion].incorrect_answers[2]} </h4>
-          <h4 data-id="correct" onClick={handleClick}> {quizzes[nextQuestion].correct_answer} </h4>
+          <h3>Q{nextQuestion}. {quizzes[nextQuestion].question}</h3>
+          <h4 data-id="wrong" onClick={handleClick} className="choice"> A. {quizzes[nextQuestion].incorrect_answers[0]} </h4>
+          <h4 data-id="wrong" onClick={handleClick} className="choice"> B. {quizzes[nextQuestion].incorrect_answers[1]} </h4>
+          <h4 data-id="wrong" onClick={handleClick} className="choice"> C. {quizzes[nextQuestion].incorrect_answers[2]} </h4>
+          <h4 data-id="correct" onClick={handleClick} className="choice"> D. {quizzes[nextQuestion].correct_answer} </h4>
         </>
       )
     } else if (randomNumber === 1) {
       return (
         <>
-          <h3>{quizzes[nextQuestion].question}</h3>
-          <h4 data-id="wrong" onClick={handleClick}> {quizzes[nextQuestion].incorrect_answers[0]} </h4>
-          <h4 data-id="correct" onClick={handleClick}> {quizzes[nextQuestion].correct_answer} </h4>
-          <h4 data-id="wrong" onClick={handleClick}> {quizzes[nextQuestion].incorrect_answers[1]} </h4>
-          <h4 data-id="wrong" onClick={handleClick}> {quizzes[nextQuestion].incorrect_answers[2]} </h4>
+          <h3>Q{nextQuestion}. {quizzes[nextQuestion].question}</h3>
+          <h4 data-id="wrong" onClick={handleClick} className="choice"> A. {quizzes[nextQuestion].incorrect_answers[0]} </h4>
+          <h4 data-id="correct" onClick={handleClick} className="choice"> B. {quizzes[nextQuestion].correct_answer} </h4>
+          <h4 data-id="wrong" onClick={handleClick} className="choice"> C. {quizzes[nextQuestion].incorrect_answers[1]} </h4>
+          <h4 data-id="wrong" onClick={handleClick} className="choice"> D. {quizzes[nextQuestion].incorrect_answers[2]} </h4>
         </>
       )
     } else if (randomNumber === 2) {
       return (
         <>
-          <h3>{quizzes[nextQuestion].question}</h3>
-          <h4 data-id="wrong" onClick={handleClick}> {quizzes[nextQuestion].incorrect_answers[0]} </h4>
-          <h4 data-id="wrong" onClick={handleClick}> {quizzes[nextQuestion].incorrect_answers[1]} </h4>
-          <h4 data-id="correct" onClick={handleClick}> {quizzes[nextQuestion].correct_answer} </h4>
-          <h4 data-id="wrong" onClick={handleClick}> {quizzes[nextQuestion].incorrect_answers[2]} </h4>
+          <h3>Q{nextQuestion}. {quizzes[nextQuestion].question}</h3>
+          <h4 data-id="wrong" onClick={handleClick} className="choice"> A. {quizzes[nextQuestion].incorrect_answers[0]} </h4>
+          <h4 data-id="wrong" onClick={handleClick} className="choice"> B. {quizzes[nextQuestion].incorrect_answers[1]} </h4>
+          <h4 data-id="correct" onClick={handleClick} className="choice"> C. {quizzes[nextQuestion].correct_answer} </h4>
+          <h4 data-id="wrong" onClick={handleClick} className="choice"> D. {quizzes[nextQuestion].incorrect_answers[2]} </h4>
         </>
       ) 
     } else if (randomNumber === 3) {
       return (
         <>
-          <h3>{quizzes[nextQuestion].question}</h3>
-          <h4 data-id="correct" onClick={handleClick}> {quizzes[nextQuestion].correct_answer} </h4>
-          <h4 data-id="wrong" onClick={handleClick}> {quizzes[nextQuestion].incorrect_answers[0]} </h4>
-          <h4 data-id="wrong" onClick={handleClick}> {quizzes[nextQuestion].incorrect_answers[1]} </h4>
-          <h4 data-id="wrong" onClick={handleClick}> {quizzes[nextQuestion].incorrect_answers[2]} </h4> 
+          <h3>Q{nextQuestion}. {quizzes[nextQuestion].question}</h3>
+          <h4 data-id="correct" onClick={handleClick} className="choice"> A. {quizzes[nextQuestion].correct_answer} </h4>
+          <h4 data-id="wrong" onClick={handleClick} className="choice"> B. {quizzes[nextQuestion].incorrect_answers[0]} </h4>
+          <h4 data-id="wrong" onClick={handleClick} className="choice"> C. {quizzes[nextQuestion].incorrect_answers[1]} </h4>
+          <h4 data-id="wrong" onClick={handleClick} className="choice"> D. {quizzes[nextQuestion].incorrect_answers[2]} </h4> 
         </>
       )
     }
@@ -112,36 +112,13 @@ function PlayQuiz() {
   return (
     <div className="mainContainer">
       
-      <h1>Right:<span>{right}</span></h1>
-      <h1>Wrong:<span>{wrong}</span></h1>
+      <h1 className="right">Right:<span>{right}</span></h1>
+      <h1 className="wrong">Wrong:<span>{wrong}</span></h1>
+      <Header />
       <div>
         {!quizzes ? '...Loading' : 
           <>
-            {/* <Test /> */}
             {RandomChoiceCombination()}
-            {/* <h3>{quizzes[nextQuestion].question}</h3>
-            <h4 data-id="wrong" onClick={handleClick}> {quizzes[nextQuestion].incorrect_answers[0]} </h4>
-            <h4 data-id="wrong" onClick={handleClick}> {quizzes[nextQuestion].incorrect_answers[1]} </h4>
-            <h4 data-id="wrong" onClick={handleClick}> {quizzes[nextQuestion].incorrect_answers[2]} </h4>
-            <h4 data-id="correct" onClick={handleClick}> {quizzes[nextQuestion].correct_answer} </h4>
-          
-            <h3>{quizzes[nextQuestion].question}</h3>
-            <h4 data-id="wrong" onClick={handleClick}> {quizzes[nextQuestion].incorrect_answers[0]} </h4>
-            <h4 data-id="correct" onClick={handleClick}> {quizzes[nextQuestion].correct_answer} </h4>
-            <h4 data-id="wrong" onClick={handleClick}> {quizzes[nextQuestion].incorrect_answers[1]} </h4>
-            <h4 data-id="wrong" onClick={handleClick}> {quizzes[nextQuestion].incorrect_answers[2]} </h4>
-
-            <h3>{quizzes[nextQuestion].question}</h3>
-            <h4 data-id="wrong" onClick={handleClick}> {quizzes[nextQuestion].incorrect_answers[0]} </h4>
-            <h4 data-id="wrong" onClick={handleClick}> {quizzes[nextQuestion].incorrect_answers[1]} </h4>
-            <h4 data-id="correct" onClick={handleClick}> {quizzes[nextQuestion].correct_answer} </h4>
-            <h4 data-id="wrong" onClick={handleClick}> {quizzes[nextQuestion].incorrect_answers[2]} </h4>
-
-            <h3>{quizzes[nextQuestion].question}</h3>
-            <h4 data-id="correct" onClick={handleClick}> {quizzes[nextQuestion].correct_answer} </h4>
-            <h4 data-id="wrong" onClick={handleClick}> {quizzes[nextQuestion].incorrect_answers[0]} </h4>
-            <h4 data-id="wrong" onClick={handleClick}> {quizzes[nextQuestion].incorrect_answers[1]} </h4>
-            <h4 data-id="wrong" onClick={handleClick}> {quizzes[nextQuestion].incorrect_answers[2]} </h4>  */}
           </>
 
         }
@@ -154,18 +131,5 @@ function PlayQuiz() {
 
 export default PlayQuiz
 
-/*          <h1>{!quizzes ? '...Loading' : quizzes[1].question}</h1>
-        <h3 onClick={handleClick} data-id="wrong" >{quizzes[1].incorrect_answers[0]}</h3>
-        <h3 data-id="wrong" onClick={handleClick}>{quizzes[1].incorrect_answers[1]}</h3>
-        <h3 data-id="wrong" onClick={handleClick}>{quizzes[1].incorrect_answers[2]}</h3>
-        <h3>{quizzes[0].correct_answer}</h3> */
-
-
-/*   
-        <h1>{!quizzes ? '...Loading' : quizzes[1].question}</h1>
-        <h3 data-id="wrong" >{quizzes[1].incorrect_answers[0]}</h3>
-        <h3 data-id="wrong">{quizzes[1].incorrect_answers[1]}</h3>
-        <h3 data-id="wrong">{quizzes[1].incorrect_answers[2]}</h3>
-        <h3>{quizzes[0].correct_answer}</h3>  */  
 
 

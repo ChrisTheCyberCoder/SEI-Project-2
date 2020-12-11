@@ -1,19 +1,35 @@
 
+body {
+  background-color: black;
+  font-family: 'Wendy One', sans-serif;
+  font-weight: 400;
+}
+  
+.header {
+  // border: 1px solid red;
+  text-align: center;
+  font-size: 50px; 
+  margin-top: 0px; 
+}
 
 .mainContainer {
-  border: 3px solid black;
-  width: 80vw; 
+  border: 5px solid rgb(255, 136, 0);
+  border-radius: 10px; 
+  width: 90vw; 
+  height: 90vh; 
   // height: 80vh;
-  margin: 100px auto auto auto; 
+  margin: 40px auto auto auto; 
   background-color: yellow;
+  position: relative;
 }
 
 .mainContainer div {
-  border: 1px solid black;
-  border-radius: 5px; 
-  width: 800px;
+  border: 4px solid black;
+  border-radius: 10px; 
+  width: 90%;
+  height: 70%;
   // height: 500px; 
-  margin: 50px auto 50px auto; 
+  margin: 50px auto auto auto; 
   // text-align: center;
   // line-height: 400px;
   // font-size: 40px; 
@@ -21,52 +37,47 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  padding-left: 20px; 
+  padding-right: 20px; 
   
+}
+
+.mainContainer div h3 {
+  width: 100%;
+  text-align: center;
+  font-size: 40px; /* 30 */ 
+  margin-bottom: 45px; 
 }
 
 .mainContainer div h4 {
-  border: 2px solid black; 
-  padding: 5px;
-  width: 700px; 
+  border: 3px solid brown; 
+  padding: 20px;
+  width: 90%; 
   border-radius: 10px;
-  
+  font-size: 20px; 
+  margin: 3px; 
 }
 
 h4:hover {
-  background-color: blue;
+  background-color: #738276;
 }
 
-// .questionsContainer {
-//   display: flex; 
-//   justify-content: center;
-//   align-items: center;
-// }
+h4.choice {
+  cursor: pointer;
+}
 
-// .mainContainer h4 {
-//   margin: 0 auto; 
-//   border: 1px solid black; 
-//   width: 100px; 
-//   height: 60px;
-//   text-align: center;
-//   line-height: 60px;
-//   margin: 30px auto auto auto;
-// }
+.right {
+  // border: 1px solid black;
+  display: inline-block;
+  // position: absolute; 
+  // left: 0px; 
+  margin-left: 20px; 
+}
 
-// .multipleChoices {
-//   border: 1px solid green; 
-//   width: 700px; 
-//   margin: 200px auto auto auto; 
-// }
-
-// .multipleChoices h3 {
-//   color: red; 
-// }
-
-// .testIt {
-//   width: 900px; 
-//   border: 1px solid red;
-// }
-
-.test {
-  color: red;
+.wrong {
+  // border: 1px solid black;
+  display: inline-block;
+  position: absolute; 
+  right: 0px; 
+  margin-right: 20px; 
 }
