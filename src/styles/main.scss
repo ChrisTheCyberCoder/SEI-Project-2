@@ -1,6 +1,6 @@
 
 body {
-  background-color: black;
+  background-color: black; /*black */
   font-family: 'Wendy One', sans-serif;
   font-weight: 400;
 }
@@ -13,28 +13,54 @@ body {
 }
 
 .mainContainer {
-  border: 5px solid rgb(255, 136, 0);
+  border: yellow; /* 5px solid rgb(255, 136, 0) */
   border-radius: 10px; 
   width: 90vw; 
   height: 90vh; 
   // height: 80vh;
-  margin: 40px auto auto auto; 
+  margin: 20px auto auto auto; 
   background-color: yellow;
   position: relative;
+}
+
+.anime {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://wallpaperaccess.com/full/9818.jpg');
+  // filter: brightness(10%);
+}
+
+.generalknowledge {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHw%3D&w=1000&q=80'); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.IT {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://png.pngtree.com/thumb_back/fw800/back_our/20190628/ourmid/pngtree-blue-tech-gear-background-image_271776.jpg'); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.celebrities {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://cdn.britannica.com/88/213488-050-B4DD1FEE/Golden-Globe-statuettes.jpg'); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .mainContainer div {
   border: 4px solid black;
   border-radius: 10px; 
   width: 90%;
-  height: 70%;
+  height: 60%;
   // height: 500px; 
-  margin: 50px auto auto auto; 
+  margin: 20px auto auto auto; 
   // text-align: center;
   // line-height: 400px;
   // font-size: 40px; 
   display: flex; 
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   align-items: center;
   padding-left: 20px; 
@@ -47,19 +73,80 @@ body {
   text-align: center;
   font-size: 40px; /* 30 */ 
   margin-bottom: 45px; 
+  font-weight: bold;
 }
 
 .mainContainer div h4 {
-  border: 3px solid brown; 
+  border: 3px solid black; 
   padding: 20px;
   width: 90%; 
   border-radius: 10px;
   font-size: 20px; 
   margin: 3px; 
+  font-weight: bold;
+}
+
+#anime1, #IT1 {
+  color: white;
+  border: 4px solid white;
+  font-weight: bold;
+}
+
+#celeb1 {
+  border: 4px solid gold;
+  color: gold;
+  font-weight: bold;
+}
+
+.animeheader {
+  color: white;
+  font-weight: bold;
+}
+
+.celebheader {
+  color: gold; 
+}
+
+.ITheader {
+  color: white;
+  font-weight: bold;
+}
+
+#animechoice {
+  border: 3px solid white;
+  font-weight: bold;
+}
+
+#ITchoice {
+  border: 3px solid white;
+  font-weight: bold;
+}
+
+#celebchoice {
+  border: 3px solid gold;
+  font-weight: bold; 
+}
+
+.animescore {
+  color: white;
+}
+
+.ITscore {
+  color: white;
+}
+
+.celebscore {
+  color: gold; 
+}
+
+.mainContainer a {
+  text-decoration: none;
 }
 
 h4:hover {
-  background-color: #738276;
+  // background-color: lightblue;
+  font-weight: bold;
+  animation: shake 0.15s;
 }
 
 h4.choice {
@@ -80,4 +167,167 @@ h4.choice {
   position: absolute; 
   right: 0px; 
   margin-right: 20px; 
+}
+
+/* Menu */
+
+.nameofgame {
+  font-size: 150px; 
+  margin-bottom: 50px; 
+}
+
+.back {
+  // border: 1px solid black; 
+  text-align: center;
+  text-decoration: none;
+  color: red;
+}
+
+.back:hover {
+  background-color: lightblue; 
+}
+
+.menu {
+  background-color: yellow;
+  border: 1px solid black;
+  border-radius: 10px; 
+  width: 50%;
+  height: 750px; /* 800 */ 
+  text-align: center; 
+  margin: 80px auto auto auto; 
+}
+
+.menuContainer {
+  // border: 1px solid black; 
+  width: 700px; 
+  margin: 20px auto auto auto; /* 50px auto */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.categories {
+  border: 3px solid black;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 3px;
+  width: 600px;
+}
+
+.categories:hover {
+  background-color: lightblue;
+  width: 650px;
+}
+ 
+/* help buttons */
+
+#helpButtonsContainer {
+  // border: 1px solid black; 
+  display: flex; 
+  flex-direction: row;
+  height: 80px;
+  border-radius: 0;
+  width: 20%;
+  margin: auto 100px auto auto; 
+  padding: 0px;
+  border: 4px solid white;
+}
+
+.fiftyButton, .audience {
+  color: black;
+  border: 3px solid black; 
+  padding: 10px 5px 10px 5px; 
+  border-radius: 25px;
+  width: 90px; 
+  text-align: center;
+  cursor: pointer;
+  margin: 0 auto;  
+  font-size: 25px;
+  line-height: 25px; ; 
+}
+
+.fiftyButton:hover {
+  color: red; 
+  width: 95px; 
+  height: 27px; 
+}
+
+.animefifty {
+  border: 3px solid white; 
+  color: red;
+}
+
+.animefifty:hover {
+  color: blue;
+}
+
+.audience {
+  width: 200px; 
+  font-size: 20px; 
+  height: 50px; 
+  background-color: white;
+  font-family: 'Wendy One', sans-serif;
+}
+
+.audience:hover {
+  width: 205px;
+  height: 55px; 
+}
+
+.animeAudience {
+  border: 3px solid white; 
+}
+
+/* ANIMATION */
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+
+
+
+@media screen and (max-width:1500px) {
+
+  .mainContainer {
+    height: 800px;
+  }
+
+  .mainContainer div h3 {
+    font-size: 30px;
+  }
+
+  #helpButtonsContainer {
+    width: 300px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .fiftyButton, .audience {
+    margin: 3px; 
+  }
+
+  .menu {
+    height: 700px; 
+    width: 800px; 
+  }
+
+
 }

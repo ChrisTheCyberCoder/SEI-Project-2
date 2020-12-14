@@ -1,17 +1,23 @@
 import React from 'react'
-// import { BrowserRouter, Switch, Route } from 'react-router-dom'
-// console.log(process.env.REACT_APP_MY_API_KEY)
-import PlayQuiz from './components/PlayQuiz.js'
-// import Menu from './components/Menu.js'
-// import Header from './components/Header.js'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import IT from './components/IT.js'
+import Menu from './components/Menu.js'
+import GeneralKnowledge from './components/GeneralKnowledge.js'
+import JapaneseAnime from './components/JapaneseAnime.js'
+import Celebrities from './components/Celebrities.js'
 
 function App() {
   
   return (
-    <body>
-      {/* <Header /> */}
-      <PlayQuiz />
-    </body>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={Menu}/>
+        <Route path="/it" component={IT} />
+        <Route path="/generalknowledge" component={GeneralKnowledge} />
+        <Route path="/japaneseanime" component={JapaneseAnime} />
+        <Route path="/celebrities" component={Celebrities} />
+      </Switch>
+    </BrowserRouter>
   )
   
 }
