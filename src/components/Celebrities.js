@@ -74,7 +74,7 @@ function Celebrities() {
     if (randomNumber === 0) {
       return (
         <>
-          <h3>Q{nextQuestion}. {quizzes[nextQuestion].question}</h3>
+          <h3>Q{nextQuestion + 1}. {quizzes[nextQuestion].question}</h3>
           {fiftyFiftyActive ? null : <h4 id="celebchoice" data-id="wrong" onClick={handleClick} className="choice"> A. {quizzes[nextQuestion].incorrect_answers[0]} </h4>}
           <h4 id="celebchoice" data-id="wrong" onClick={handleClick} className="choice"> B. {quizzes[nextQuestion].incorrect_answers[1]} </h4>
           {fiftyFiftyActive ? null : <h4 id="celebchoice" data-id="wrong" onClick={handleClick} className="choice"> C. {quizzes[nextQuestion].incorrect_answers[2]} </h4>}
@@ -84,7 +84,7 @@ function Celebrities() {
     } else if (randomNumber === 1) {
       return (
         <>
-          <h3>Q{nextQuestion}. {quizzes[nextQuestion].question}</h3>
+          <h3>Q{nextQuestion + 1}. {quizzes[nextQuestion].question}</h3>
           {fiftyFiftyActive ? null : <h4 id="celebchoice" data-id="wrong" onClick={handleClick} className="choice"> A. {quizzes[nextQuestion].incorrect_answers[0]} </h4>}
           <h4 id="celebchoice" data-id="correct" onClick={handleClick} className="choice"> B. {quizzes[nextQuestion].correct_answer} </h4>
           <h4 id="celebchoice" data-id="wrong" onClick={handleClick} className="choice"> C. {quizzes[nextQuestion].incorrect_answers[1]} </h4>
@@ -94,7 +94,7 @@ function Celebrities() {
     } else if (randomNumber === 2) {
       return (
         <>
-          <h3>Q{nextQuestion}. {quizzes[nextQuestion].question}</h3>
+          <h3>Q{nextQuestion + 1}. {quizzes[nextQuestion].question}</h3>
           <h4 id="celebchoice" data-id="wrong" onClick={handleClick} className="choice"> A. {quizzes[nextQuestion].incorrect_answers[0]} </h4>
           {fiftyFiftyActive ? null : <h4 id="celebchoice" data-id="wrong" onClick={handleClick} className="choice"> B. {quizzes[nextQuestion].incorrect_answers[1]} </h4>}
           <h4 id="celebchoice" data-id="correct" onClick={handleClick} className="choice"> C. {quizzes[nextQuestion].correct_answer} </h4>
@@ -104,7 +104,7 @@ function Celebrities() {
     } else if (randomNumber === 3) {
       return (
         <>
-          <h3>Q{nextQuestion}. {quizzes[nextQuestion].question}</h3>
+          <h3>Q{nextQuestion + 1}. {quizzes[nextQuestion].question}</h3>
           <h4 id="celebchoice" data-id="correct" onClick={handleClick} className="choice"> A. {quizzes[nextQuestion].correct_answer} </h4>
           <h4 id="celebchoice" data-id="wrong" onClick={handleClick} className="choice"> B. {quizzes[nextQuestion].incorrect_answers[0]} </h4>
           {fiftyFiftyActive ? null : <h4 id="celebchoice" data-id="wrong" onClick={handleClick} className="choice"> C. {quizzes[nextQuestion].incorrect_answers[1]} </h4>}
