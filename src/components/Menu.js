@@ -7,23 +7,24 @@ function Menu() {
     <div className="menu">
       <h1 className="nameofgame">QUIZ</h1>
       <div className="menuContainer">
-        {/* <h1 className="quizmenu">QuizMenu</h1> */}
-        <Link to={'/it'}>
-          <h1 className="categories">PLAY: IT Quiz</h1>
+        
+        <Link to={{ pathname: '/game', state: 'IT' }}>
+          <h1 className="categories">PLAY: Information Technology</h1>
         </Link> 
-        {/* <h6>A Programming Quiz!</h6> */}
-        <Link to={'/generalknowledge'}>
+       
+        <Link to={{ pathname: '/game', state: 'generalKnowledge' }}>
           <h1 className="categories">PLAY: General Knowledge</h1>
         </Link>
-        {/* <h6>General Knowledge</h6> */}
-        <Link to={'/japaneseanime'}>
-          <h1 className="categories">PLAY: JapaneseAnime</h1>
+        
+        <Link to={{ pathname: '/game', state: 'anime' }}>
+          <h1 className="categories">PLAY: Anime</h1>
         </Link>
-        {/* <h6>Test your knowledge on Anime!</h6> */}
-        <Link to={'/celebrities'}>
+        
+        <Link to={{ pathname: '/game', state: 'celebrities' }}>
           <h1 className="categories">PLAY: Celebrities</h1>
         </Link>
-        <h6>Tips: You can ask the audience for help once only, and use 50/50 only three times.</h6>
+
+        <h6>Tips: Life-lines can only be used once each. </h6>
       </div>
     </div>
    

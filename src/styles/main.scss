@@ -1,26 +1,186 @@
+* {
+  padding: 0; 
+  margin: 0; 
+  box-sizing: border-box;
+}
+
+html {
+  background-color: black;
+  width: 100vw; 
+  height: 100vh; 
+  display: flex;
+}
 
 body {
-  background-color: black; /*black */
+  justify-content: center;
+  align-items: center;
+  background-color: black; 
   font-family: 'Wendy One', sans-serif;
   font-weight: 400;
+  width: 100vw; 
+  height: 100vh; 
+  min-height: 1300px; 
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container { 
+  display: flex; 
+  justify-content: center;
+  margin: 40px auto; 
+  width: 1000px; 
+  height: 750px;
+}
+
+.moneyboard { 
+  width: 300px; 
+  max-width: 300px; 
+  height: 750px; 
+}
+
+.center_items_moneyboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.moneyboard div { 
+  border: 1px solid gold;
+  height: 22px;
+  width: 92%; 
+  border-radius: 10px; 
+  color: gold;
+  text-align: center;
+  font-size: 15px;
+  line-height: 20px; 
+  margin: 8px auto;
+  // align-items: space-around;
+  // margin: 5px;  
+}
+
+.moneyboard_silver { 
+  background-color: silver;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  animation: bracketMoneypulse 2s;
+  animation-iteration-count:infinite;
+}
+
+.moneyboardred {
+  background-color: red;
+}
+
+.moneyboardgreen {
+  background-color: green; 
+}
+
+.moneyboardyellow {
+  background-color:gold;
+}
+
+.shake { 
+  animation: /*popout 2s, */ securePointPulse 2s; 
+  // animation: shake 1s;
+  animation-iteration-count:infinite;
+}
+
+.shine {
+  animation: shine 0.3s, audiencepulse 2s;
+  animation-iteration-count:infinite;
+}
+
+.takemoney_box {
+  color: red; 
+  text-align: center;
+  border: 1px solid gold; 
+  padding: 4px; 
+  border-radius: 5px; 
+  width: 90%; 
+  margin: 10px auto 100px auto;
+  cursor: pointer;
+  animation: takeMoneypulse 2s;
+  animation-iteration-count:infinite;
+}
+
+.secured_money_off {
+  color: green; 
+  animation: secureMoneypulse 2s;
+  animation-iteration-count:infinite;
+  cursor: none;
+}
+
+.secured_money_on {
+  color: green; 
+  animation: secureMoneypulse 2s;
+  animation-iteration-count:infinite;
+}
+
+.gameover {
+  color: red; 
+  height: 900px;
+}
+
+.won_nothing {
+  color: red;
+  text-align: center;
+  width: 170px; 
+  display: inline-block;
+}
+
+.won_1000 {
+  color: darkgreen;
+  text-align: center;
+  width: 170px; 
+  display: inline-block;
+}
+
+.won_32000 {
+  color: green;
+  text-align: center;
+  width: 170px; 
+  display: inline-block;
+}
+
+.jackpot {
+  // border: 2px solid pink;
+  color: green;
+  width: 500px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.jackpot .million_message {
+  color: green; 
+}
+
+.takethemoney {
+  color: green;
+  width: 500px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
   
 .header {
-  // border: 1px solid red;
   text-align: center;
   font-size: 50px; 
   margin-top: 0px; 
 }
 
-.mainContainer {
-  border: yellow; /* 5px solid rgb(255, 136, 0) */
+.game_container {
+  border: yellow; 
   border-radius: 10px; 
-  width: 90vw; 
-  height: 90vh; 
-  // height: 80vh;
-  margin: 20px auto auto auto; 
+  max-width: 1000px; 
+  height: 745px;
   background-color: yellow;
-  position: relative;
 }
 
 .anime {
@@ -28,8 +188,8 @@ body {
   // filter: brightness(10%);
 }
 
-.generalknowledge {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHw%3D&w=1000&q=80'); 
+.generalKnowledge {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHw%3D&w=1000&q=80'); 
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -43,22 +203,20 @@ body {
 }
 
 .celebrities {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://cdn.britannica.com/88/213488-050-B4DD1FEE/Golden-Globe-statuettes.jpg'); 
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://cdn.britannica.com/88/213488-050-B4DD1FEE/Golden-Globe-statuettes.jpg'); 
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-.mainContainer div {
+.game_container div {
   border: 4px solid black;
   border-radius: 10px; 
-  width: 90%;
-  height: 60%;
-  // height: 500px; 
+  max-width: 1000px; 
+  min-width: 700px; 
+  width: 700px;
+  height: 520px;
   margin: 20px auto auto auto; 
-  // text-align: center;
-  // line-height: 400px;
-  // font-size: 40px; 
   display: flex; 
   justify-content: flex-start;
   flex-direction: column;
@@ -69,15 +227,17 @@ body {
   animation-iteration-count:infinite;
 }
 
-.mainContainer div h3 {
+.game_container div h3 {
   width: 100%;
   text-align: center;
-  font-size: 40px; /* 30 */ 
+  font-size: 35px;
   margin-bottom: 45px; 
   font-weight: bold;
+  margin-top: 7px;
+  word-wrap: break-word; 
 }
 
-.mainContainer div h4 {
+.game_container div h4 {
   border: 3px solid black; 
   padding: 20px;
   width: 90%; 
@@ -87,33 +247,46 @@ body {
   font-weight: bold;
 }
 
-#anime1, #IT1 {
+#anime_text, #IT_text {
   color: white;
   border: 4px solid white;
   font-weight: bold;
 }
 
-#celeb1 {
+#celeb_text {
   border: 4px solid gold;
   color: gold;
   font-weight: bold;
 }
 
-.animeheader {
+.anime_header {
   color: white;
   font-weight: bold;
+  margin-top: 16px;
+  margin-bottom: 75px;
 }
 
-.celebheader {
+.celeb_header {
   color: gold; 
+  margin-top: 16px;
+  margin-bottom: 75px;
 }
 
-.ITheader {
+.IT_header {
   color: white;
   font-weight: bold;
+  margin-top: 16px;
+  margin-bottom: 75px;
 }
 
-#animechoice {
+.general_header {
+  color: white;
+  font-weight: bold;
+  margin-top: 16px;
+  margin-bottom: 75px; 
+}
+
+#anime_choice {
   border: 3px solid white;
   font-weight: bold;
 }
@@ -123,29 +296,16 @@ body {
   font-weight: bold;
 }
 
-#celebchoice {
+#celeb_choice {
   border: 3px solid gold;
   font-weight: bold; 
 }
 
-.animescore {
-  color: white;
-}
-
-.ITscore {
-  color: white;
-}
-
-.celebscore {
-  color: gold; 
-}
-
-.mainContainer a {
+.game_container a {
   text-decoration: none;
 }
 
 h4:hover {
-  // background-color: lightblue;
   font-weight: bold;
   animation: shake 0.15s;
 }
@@ -154,25 +314,10 @@ h4.choice {
   cursor: pointer;
 }
 
-.right {
-  // border: 1px solid black;
-  display: inline-block;
-  // position: absolute; 
-  // left: 0px; 
-  margin-left: 20px; 
-}
-
-.wrong {
-  // border: 1px solid black;
-  display: inline-block;
-  position: absolute; 
-  right: 0px; 
-  margin-right: 20px; 
-}
-
 /* Menu */
 
 .nameofgame {
+  margin-top: 100px;
   font-size: 150px; 
   margin-bottom: 50px; 
   animation: slide 2s;
@@ -180,22 +325,23 @@ h4.choice {
 }
 
 .back {
-  // border: 1px solid black; 
   text-align: center;
   text-decoration: none;
-  color: red;
+  color: lightgrey;
+  margin-top: 30px;
 }
 
-.back:hover {
-  background-color: lightblue; 
-}
+// .back:hover {
+//   background-color: lightblue; 
+// }
 
 .menu {
   background-color: yellow;
   border: 1px solid black;
   border-radius: 10px; 
-  width: 50%;
-  height: 750px; /* 800 */ 
+  width: 718px;
+  min-width: 718px; 
+  height: 750px;
   text-align: center; 
   margin: 80px auto auto auto; 
   animation: shake 8s; 
@@ -203,9 +349,8 @@ h4.choice {
 }
 
 .menuContainer {
-  // border: 1px solid black; 
   width: 700px; 
-  margin: 20px auto auto auto; /* 50px auto */
+  margin: 20px auto auto auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -234,17 +379,11 @@ h4.choice {
 /* help buttons */
 
 #helpButtonsContainer {
-  // border: 1px solid black; 
+  border: none; 
   display: flex; 
-  flex-direction: row;
-  height: 80px;
-  border-radius: 0;
-  width: 20%;
-  margin: auto 100px auto auto; 
-  padding: 0px;
-  border: none; /*4px solid white*/
-  animation: staywhite 0.1s;
-  animation-iteration-count:infinite;
+  height: 100px; 
+  justify-content: center;
+  align-items: center; 
 }
 
 .fiftyButton, .audience {
@@ -257,16 +396,17 @@ h4.choice {
   cursor: pointer;
   margin: 0 auto;  
   font-size: 25px;
-  line-height: 25px; ; 
+  line-height: 25px;
+  margin-right: 2px;
 }
 
 .fiftyButton:hover {
   color: red; 
   width: 95px; 
-  height: 27px; 
+  height: 52px; 
 }
 
-.animefifty {
+.fifty {
   border: 3px solid white; 
   color: red;
   animation: pulse 2s;
@@ -289,14 +429,23 @@ h4.choice {
 }
 
 .audience:hover {
-  width: 205px;
-  height: 55px; 
+  width: 204.5px;
+  height: 51.5px; 
   color: red;
 }
 
-.animeAudience {
-  border: 3px solid white; 
+// .animeAudience {
+//   border: 3px solid white; 
+// }
+
+.red {
+  background-color: red; 
 }
+
+.green {
+  background-color: green; 
+}
+
 
 /* ANIMATION */
 
@@ -335,6 +484,46 @@ h4.choice {
   100% {color: red;}
 }
 
+@keyframes takeMoneypulse {
+  0% {color: red;}
+  25% {color: darkred;}
+  50% {color: red;}
+  75% {color: darkred;}
+  100% {color: red;}
+}
+
+@keyframes bracketMoneypulse {
+  0% {color: silver;}
+  25% {color: darkgrey;}
+  50% {color: silver;}
+  75% {color: darkgrey;}
+  100% {color: silver;}
+}
+
+@keyframes secureMoneypulse {
+  0% {color: green;}
+  25% {color: darkgreen;}
+  50% {color: green;}
+  75% {color: darkgreen;}
+  100% {color: green;}
+}
+
+@keyframes securePointPulse {
+  0% {color: red;}
+  25% {color: black;}
+  50% {color: red;}
+  75% {color: black;}
+  100% {color: red;}
+}
+
+// @keyframes popout {
+//   0% {height: 35px; width: 95%;}
+//   30% {height: 35px; width: 92%;}
+//   50% {height: 35px; width: 95%;}
+//   80% {height: 35px; width: 92%;}
+//   100% {height: 35px; width: 95%;}
+// }
+
 @keyframes borderpulse {
   0% {border: 4px solid white;}
   25% {border: 4px solid grey;}
@@ -348,33 +537,15 @@ h4.choice {
   100% {border:none;}
 }
 
-
-
-
-@media screen and (max-width:1500px) {
-
-  .mainContainer {
-    height: 800px;
-  }
-
-  .mainContainer div h3 {
-    font-size: 30px;
-  }
-
-  #helpButtonsContainer {
-    width: 300px;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-
-  .fiftyButton, .audience {
-    margin: 3px; 
-  }
-
-  .menu {
-    height: 700px; 
-    width: 800px; 
-  }
-
-
+@keyframes shine {
+  0% {background-color: green;}
+  25% {background-color: darkgreen;}
+  25% {background-color: green;}
+  50% {background-color: darkgreen;}
+  50% {background-color: green;}
+  75% {background-color: darkgreen;}
+  75% {background-color: green;}
+  100% {background-color: darkgreen;}
 }
+
+
