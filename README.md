@@ -21,6 +21,7 @@
         * [Wins](#Wins)
         * [Challenges](#Challenges)
     * [Key Learnings](#Key-Learnings)
+* [Play the game](#Play-the-game)
 
 ## Overview
 
@@ -485,6 +486,9 @@ I would say the biggest challenge would have to be using a third party API of wh
 - Manipulating JSX in conjunction with state variables. 
 - I learnt how to implement a third party API. 
 
+# Play the game
+
+To play the game <a href="https://reactquizchristian.netlify.app/">click here.</a>
 
 
 
